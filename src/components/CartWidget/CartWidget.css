@@ -1,17 +1,15 @@
-.cart{
-    align-items: center;
-    cursor: pointer;
-    margin: auto;
-    margin: 1rem;
-}
-.cart span{
-    margin:1rem;
-    font-size: 25px;
-}
 .icon{
-    font-size: 25px;
-}.icon:hover{
-    color: #5b5858;
+    font-size: 20px;
+    color: black;
+}
+.icon:hover{
+    color: #086d2b;
     scale: 1.1;
     transition: 0.5s;
+}
+.cartQuantity{
+    margin-left: 1rem;
+    font-size: 20px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
 }

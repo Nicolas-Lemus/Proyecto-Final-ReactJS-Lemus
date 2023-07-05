@@ -1,5 +1,6 @@
 import React from "react";
 import "./CartDetailCard.css"
+
 const CartDetailCard = ({ product, quantity}) => {
 
   return (

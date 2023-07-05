@@ -11,20 +11,17 @@ const Category = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
 
-  const { categoryId } = useParams();
+  const {categoryId} = useParams();
 
   useEffect(() => {
     const db = getFirestore();
-
     const tecnologiaCollection = collection(db, "tecnologia");
     getDocs(tecnologiaCollection)
       .then((snapshot) => {
-        
         const productsFilter = snapshot.docs.map((doc) => ({
           id: doc.id,
           ...doc.data(),
         }));
-
         setProductsData(
           productsFilter.filter((products) => products.category === categoryId)
         );
@@ -39,7 +36,7 @@ const Category = () => {
       <Error/>
     ) : (
     <div>
-      <Headers HeadersH1 ="Categorias"/>
+      <Headers HeadersH1 ={categoryId}/>
       <ItemListContainer productsData={productsData} />;
     </div>
   )
