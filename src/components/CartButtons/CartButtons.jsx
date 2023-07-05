@@ -3,6 +3,7 @@ import { Button } from "react-bootstrap";
 import { CartContext } from "../../context/CartContext";
 import "./CartButtons.css"
 
+
 const CartButtons = ({productId}) => {
   const [state, setState] = useState(1);
   const { count, setCount } = useContext(CartContext);
@@ -17,25 +18,32 @@ const CartButtons = ({productId}) => {
     }
   };
 
-  const addToCart = () => { 
-    const existingProduct = count.tecnologia.find(
+  const addToCart = () => {
+    const existingProductIndex = count.tecnologia.findIndex(
       (p) => p.productId === productId
     );
-    if (existingProduct) {
-      existingProduct.quantity += state;
+
+    if (existingProductIndex !== -1) {
+      const updatedTecnologia = [...count.tecnologia];
+      updatedTecnologia[existingProductIndex].quantity += state;
+
+      setCount((prevState) => ({
+        quantityItems: prevState.quantityItems + state,
+        tecnologia: updatedTecnologia,
+      }));
     } else {
       const newProduct = {
         productId,
         quantity: state,
       };
+  
       setCount((prevState) => ({
-        
         quantityItems: prevState.quantityItems + state,
         tecnologia: [...prevState.tecnologia, newProduct],
       }));
     }
   };
-
+  
   return (
     <div className="quantity">
       <div className="w-25">
