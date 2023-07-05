@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { collection, getDocs, getFirestore } from "firebase/firestore";
 import DotSpinner from "../animations/DotSpinner ";
 import Headers from "../components/Headers/Headers";
+import Error from "../error/Error";
 
 const Category = () => {
   const [productsData, setProductsData] = useState([]);
@@ -35,7 +36,7 @@ const Category = () => {
   return loading ? (
     <DotSpinner/> 
     ) : error ? (
-      <div>Algo salio mal</div>
+      <Error/>
     ) : (
     <div>
       <Headers HeadersH1 ="Categorias"/>

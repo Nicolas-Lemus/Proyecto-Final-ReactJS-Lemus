@@ -3,6 +3,7 @@ import ItemDetailContainer from "../components/ItemDetailContainer/ItemDetailCon
 import { useParams } from "react-router-dom";
 import { doc, getDoc, getFirestore } from "firebase/firestore";
 import DotSpinner  from "../animations/DotSpinner ";
+import Error from "../error/Error";
 
 const Item = () => {
   const [productsData, setProductsData] = useState([]);
@@ -27,7 +28,7 @@ const Item = () => {
   return loading ? (
       <DotSpinner/>
       ):error ? (
-        <div>Algo salio mal</div>
+        <Error/>
       ):( 
       <div>
         <ItemDetailContainer productsData={productsData} />;

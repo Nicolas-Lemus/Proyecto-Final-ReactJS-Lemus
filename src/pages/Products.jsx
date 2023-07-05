@@ -3,6 +3,7 @@ import ItemListContainer from "../components/ItemListContainer/ItemListContainer
 import { collection, getDocs, getFirestore } from "firebase/firestore";
 import  DotSpinner  from "../animations/DotSpinner ";
 import Headers from "../components/Headers/Headers";
+import Error from "../error/Error";
 
 const Products = () => {
   const [productsData, setProductsData] = useState([]);
@@ -29,7 +30,7 @@ const Products = () => {
     {loading ? (
         <DotSpinner/>
     ):error ? (
-        <div>Algo salio mal</div>
+        <Error/>
     ):(
         <div>
             <Headers HeadersH1="Productos"/>

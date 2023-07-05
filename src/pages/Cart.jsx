@@ -4,6 +4,7 @@ import { CartContext } from "../context/CartContext";
 import CartDetailCard from "../components/CartDetailCard/CartDetailCard";
 import Headers from "../components/Headers/Headers";
 import DotSpinner from "../animations/DotSpinner ";
+import Error from "../error/Error"
 
 
 const fetchProductsByIds = async (ids) => {
@@ -27,7 +28,7 @@ const Cart = () => {
   const [error, setError] = React.useState(false);
   const [productsData, setProductsData] = React.useState([]);
   const [loading, setLoading] = React.useState(true);
-  const { count } = useContext(CartContext);
+  const {count} = useContext(CartContext);
 
   React.useEffect(() => {
     const ids = count.tecnologia.map((product) => product.productId);
@@ -42,7 +43,7 @@ const Cart = () => {
   return loading ? (
     <DotSpinner/>
   ) : error ? (
-    <div>Algo salio mal</div>
+    <Error/>
   ):(
     <div>
       <Headers HeadersH1="Carrito🛒"/>
