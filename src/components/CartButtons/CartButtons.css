@@ -18,10 +18,11 @@
     font-weight: 700;
     font-size: 1.6rem;
     width: 40px;
-    height: 30px;
+    height: 40px;
     display: flex;
     align-items: center;
-    border-radius: 10px !important;
+    justify-content: center;
+    border-radius: 50% !important;
 }
 .rounded-0:hover{
     background: rgb(59, 130, 57);

@@ -8,16 +8,18 @@
     display: flex;
 }
 .logoFooter img{
-    width: 80px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     margin: 10px;
+    position: absolute;
 }
 .footerList{
     width: 100%;
     padding: auto;
 }
 .footerList h2{
-    margin-left: 2rem;
+    margin-left: 5rem;
     padding-top: 1rem;
     font-size: 2.5rem;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;;
@@ -31,11 +33,14 @@
     font-size: 1.7rem;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
+.footerListItems ul{
+    padding: 0;
+}
 .footerListItems ul li{
     font-size: 1rem;
     list-style:none;
     padding-top: .1rem;
-    padding-left: 1rem;
+    text-align: center;
 }
 .footerContact{
     display: flex;

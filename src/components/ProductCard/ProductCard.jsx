@@ -14,7 +14,7 @@ const ProductCard = ({productData}) => {
       <h5>$ {productData.price}</h5>
       <p>Stock: {productData.stock}</p>
       <CartButtons productId={productData.id}/>
-      <h6 className="Detail"><Link to={`/products/${productData.id}`}>ir a descripcion</Link></h6>
+      <h6 className="Detail"><Link to={`/products/${productData.id}`}>ir a descripción</Link></h6>
     </Card>
   );
 };

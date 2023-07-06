@@ -47,3 +47,11 @@
     transition: 1s;
     border-color: rgb(213, 204, 204);
 }
+.Detail a{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(46, 90, 1);
+}
+.Detail a:hover{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(10, 118, 226);
+}

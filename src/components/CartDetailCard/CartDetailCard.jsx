@@ -1,7 +1,7 @@
 import React from "react";
 import "./CartDetailCard.css"
 
-const CartDetailCard = ({ product, quantity}) => {
+const CartDetailCard = ({ product, quantity,removeProduct}) => {
 
   return (
     <div className="Card">
