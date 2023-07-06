@@ -17,10 +17,11 @@
     color: rgb(0, 0, 0);
     font-weight: 700;
     font-size: 1.6rem;
-    width: 50px;
-    height: 40px;
+    width: 40px;
+    height: 30px;
     display: flex;
     align-items: center;
+    border-radius: 10px !important;
 }
 .rounded-0:hover{
     background: rgb(59, 130, 57);

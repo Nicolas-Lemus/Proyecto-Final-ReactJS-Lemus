@@ -5,13 +5,17 @@
 .Images{
     margin: 0 auto;
 }
-.Title{
+h3{
     text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-.Description{
-    padding: 1rem;
-    font-size: 1.3rem;
+h4{
+    padding: 1rem 2rem;
+    font-size: 1.3rem !important;
+    font-weight: 400;
 }
-.Price{
+h5{
     text-align: center;
+    font-weight: 200;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }

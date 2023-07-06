@@ -5,15 +5,11 @@ const CartDetailCard = ({ product, quantity}) => {
 
   return (
     <div className="Card">
-      <div className="Images">
-        <img src={product.images} alt={product.title} />
-      </div>
-      <div>
-        <div className="Title">{product.title}</div>
-        <div className="qty">
-          Cantidad:{quantity.quantity}
-        </div>
-      </div>
+      <h3>{product.title}</h3>
+      <div className="Images"><img src={product.images} alt={product.title}/></div>
+      <h5>c/u $ {product.price}</h5>
+      <h6 className="qty">Cantidad : {quantity.quantity}</h6>
+      <h6 id="total">Total: $ {product.price * quantity.quantity}</h6>
     </div>
   );
 };

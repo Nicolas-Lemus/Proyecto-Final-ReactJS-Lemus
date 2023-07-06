@@ -4,25 +4,17 @@ import Card from "react-bootstrap/Card";
 import "./CardDescription.css"
 
 
-const CardDescription = ({ productData }) => {
+const CardDescription = ({productData}) => {
 
   return (
     <Card className="cardDescription">
-      <div className="Images">
-        <Card.Img src={productData.images}/>
-      </div>
-      
-      <Card.Title className="Title">{productData.title}</Card.Title>
-      <Card.Body>
-        <div className="Description">{productData.description}</div>
-        <div className="Stock">
-          {productData.stock}
-        </div>
-        <div className="Price"> $ {productData.price}</div>
-          <CartButtons  productId={productData.id}/>
-        <div>
-        </div>
-      </Card.Body>
+      <div className="Images"><img src={productData.images} alt={productData.title}/></div>
+      <h3>{productData.title}</h3>
+      <h4>{productData.description}</h4>
+      <h5 className='Previous'>$ {productData.previous_price}</h5>
+      <h5>{productData.stock}</h5>
+      <h5>$ {productData.price}</h5>
+      <CartButtons productId={productData.id}/>
     </Card>
   );
 };

@@ -18,12 +18,12 @@ const Category = () => {
     const tecnologiaCollection = collection(db, "tecnologia");
     getDocs(tecnologiaCollection)
       .then((snapshot) => {
-        const productsFilter = snapshot.docs.map((doc) => ({
+        const tecnologiaFilter = snapshot.docs.map((doc) => ({
           id: doc.id,
           ...doc.data(),
         }));
         setProductsData(
-          productsFilter.filter((products) => products.category === categoryId)
+          tecnologiaFilter.filter((products) => products.category === categoryId)
         );
       })
       .catch(() => setError(true))
@@ -31,7 +31,7 @@ const Category = () => {
   }, [categoryId]);
 
   return loading ? (
-    <DotSpinner/> 
+      <DotSpinner/> 
     ) : error ? (
       <Error/>
     ) : (
