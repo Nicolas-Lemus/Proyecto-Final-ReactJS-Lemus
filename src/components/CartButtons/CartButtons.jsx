@@ -13,7 +13,7 @@ const CartButtons = ({productId}) => {
   };
 
   const handleClickRes = () => {
-    if (state * 1 !== 1) {
+    if (state !== 1) {
       setState(state - 1);
     }
   };
